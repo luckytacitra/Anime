@@ -36,23 +36,11 @@ if not os.path.exists("users-details-2023.csv"):
         quiet=False
     )
 
-# USERS SCORE
-if not os.path.exists("users-score-2023.csv"):
-
-    url = "https://drive.google.com/uc?id=1GHeBAyesBIAziMEAPWD7rpw1uZOVJ_HB"
-
-    gdown.download(
-        url,
-        "users-score-2023.csv",
-        quiet=False
-    )
-
 @st.cache_data
-
 def load_data():
     df_anime = pd.read_csv('anime-dataset-2023.csv')
     df_user = pd.read_csv('users-details-2023.csv')
-    df_score = pd.read_csv('users-score-2023.csv')
+    df_score = pd.read_csv('users-score-small.csv')
     return df_anime, df_user, df_score
 
 
