@@ -25,7 +25,18 @@ st.markdown("Dashboard Analisis Anime 2023")
 # =====================================
 # LOAD DATA
 # =====================================
-# DOWNLOAD FILE BESAR DARI GOOGLE DRIVE
+# USERS DETAILS
+if not os.path.exists("users-details-2023.csv"):
+
+    url = "https://drive.google.com/uc?id=1XQ_m3aZ34ogv5CjOA3UFLPHJ9S_RtQvc"
+
+    gdown.download(
+        url,
+        "users-details-2023.csv",
+        quiet=False
+    )
+
+# USERS SCORE
 if not os.path.exists("users-score-2023.csv"):
 
     url = "https://drive.google.com/uc?id=1GHeBAyesBIAziMEAPWD7rpw1uZOVJ_HB"
