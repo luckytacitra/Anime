@@ -5,6 +5,5 @@ plotly
 matplotlib
 wordcloud
 scikit-learn
-tensorflow
 langdetect
 gdown
